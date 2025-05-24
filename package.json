@@ -1,0 +1,26 @@
+{
+  "name": "steam-csv-importer",
+  "version": "1.0.0",
+  "description": "Import Steam games CSV to SQLite database",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "import": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "Walker-TW",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/sqlite3": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
