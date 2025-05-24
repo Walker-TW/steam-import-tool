@@ -3,6 +3,7 @@ import * as path from 'path';
 import csv from 'csv-parser';
 import { Database } from 'sqlite3';
 import { createReadStream } from 'fs';
+import * as dotenv from 'dotenv';
 
 // Interface for Steam Game data structure
 interface SteamGame {
@@ -363,9 +364,12 @@ class SteamCSVImporter {
 
 // Usage example and main execution
 async function main() {
+  // Load environment variables from .env if available
+  dotenv.config();
+
   const config: ImportConfig = {
-    csvFilePath: './steam_games.csv', // Update this path
-    dbPath: './steam_games.db',
+    csvFilePath: process.env.INPUT_PATH || './games.csv',
+    dbPath: process.env.OUTPUT_PATH || './steam_games.db',
     chunkSize: 1000,
     tableName: 'steam_games'
   };
