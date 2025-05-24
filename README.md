@@ -6,7 +6,7 @@ A Typescript written tool to convert the dataset by Martin Bustos (https://www.k
 
 ### Prerequisites
 
-- Node.js v20 or below
+- Node.js v20 or below (sqlite3's C++ compiler is not a fan)
 - npm
 
 ### Installation
@@ -35,14 +35,14 @@ A Typescript written tool to convert the dataset by Martin Bustos (https://www.k
     ```bash
     with environment variables (for example):
 
-    ```bash
     INPUT='./my_steam_game.csv' OUTPUT='./my_steam_game.db' npm run start
-    ```   ```
+    ```  
 
 ### Notes
 
 - Ensure you are using Node.js v20 or below for compatibility.
 - The tool converts the CSV dataset into SQL insert statements suitable for database import.
+- You can pass your own names for input and output if you wish as ENV variables via the command line.
 
 ### License
 
